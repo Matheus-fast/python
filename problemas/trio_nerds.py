@@ -5,11 +5,14 @@ for pos in range(3):
     instrumentos[pos] = str(input('')).strip().lower()
 
 for instrumento in instrumentos:
-
-        if instrumentos.count(instrumento) > 1:
+    if instrumento in certos:
+        if instrumentos.count(instrumento) == 1:
+            resp = True
+        else:
             resp = False
             break
-        else:
-            resp = True
+    else:
+        resp = False
+        break
             
-print('S' if resp == True else 'N')
+print('S' if resp else 'N')
