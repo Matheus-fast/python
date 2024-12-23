@@ -1,0 +1,2 @@
+n = int(input('Digite um valor: '))
+print('O valor digitado é \033[33m{}\033[m\no seu dobro é \033[35m{}\033[m\no seu \033[40;97mtriplo\033[m é \033[36m{}\033[m\ne a raíz quadrada é \033[32m{}\033[m.'.format(n, (n*2), (n*3), (n**0.5) ))
