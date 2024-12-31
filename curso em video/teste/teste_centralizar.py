@@ -1,8 +1,10 @@
-""" fruta = 'abacaxi'
+fruta = 'abacaxi'
 
-print(f'{fruta:^30}') """
+print(f'{fruta:>15}')
+print(f'{fruta:<15}')
+print(f'{fruta:^15}')
 
-matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+""" matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 terceira = []
 
 for coluna in range(3):
@@ -16,4 +18,4 @@ for coluna in range(3):
 
 
 print(matriz[:][2])
-print(sum(matriz[:][2]))
+print(sum(matriz[:][2])) """

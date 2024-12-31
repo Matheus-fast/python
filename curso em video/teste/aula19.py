@@ -8,9 +8,9 @@ print(dados['nome'])
 
 print('-='*15)
 
-print(dados.values())
-print(dados.keys())
-print(dados.items())
+print(dados.values()) # valores
+print(dados.keys()) # chaves
+print(dados.items()) # tudo junto
 
 print('-='*15)
 
