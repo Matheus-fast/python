@@ -36,9 +36,11 @@ estado = {}
 brasil = []
 
 for c in range(3):
-    estado['uf'] = str(input('Digite o UF do estado: ')).split()
-    estado['sigla'] = str(input('Digite a SIGLA do estado: ')).split()
+    estado['uf'] = str(input('Digite o UF do estado: ')).strip()
+    estado['sigla'] = str(input('Digite a SIGLA do estado: ')).strip()
     brasil.append(estado.copy())
+
+print(brasil)
 
 for e in brasil:
 
