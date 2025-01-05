@@ -6,7 +6,7 @@ partidas = int(input(f'Digite quantas partidas o {jogador["nome"]} jogou: '))
 
 for i in range(1, partidas+1):
 
-    gol = int(input(f'Digite quantos gols {jogador['nome']} fez na {i}° partida: '))
+    gol = int(input(f'Digite quantos gols {jogador["nome"]} fez na {i}° partida: '))
     gols.append(gol)
 
 jogador['gols'] = gols[:]
@@ -22,9 +22,9 @@ for k, v in jogador.items():
 
 print('-='*25)
 
-print(f'O jogador {jogador['nome']} jogou {partidas} partidas.')
+print(f'O jogador {jogador["nome"]} jogou {partidas} partidas.')
 
 for i, v in enumerate(gols):
     print(f'  => Na {i+1}° partida, fez {v} gols.')
 
-print(f'Foi um total de {jogador['total']} gols.')
+print(f'Foi um total de {jogador["total"]} gols.')
