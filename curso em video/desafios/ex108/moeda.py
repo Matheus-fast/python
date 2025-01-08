@@ -1,11 +1,18 @@
 def moeda(valor):
     return f'R${valor:.2f}'.replace('.', ',')
 
-def metade(valor):
-    print(f'A metade de {moeda(valor)} é: {moeda(valor)}')
+def metade(valor=0, format=False):
+    novoValor = valor / 2
+    return novoValor
 
-def dobro(valor):
-    print(f'O dobro do valor {moeda(valor)} é: {moeda(valor)}')
+def dobro(valor=0,):
+    novoValor = valor*2
+    return novoValor
 
-def aumento10(valor):
-    print(f'O valor {moeda(valor)} com um acrécimo de 10% ficará: {moeda(valor + (valor/100) * 10)}')
+def acrescimo(valor=0, aumento=1):
+    novoValor = (valor / 100) * aumento + valor
+    return novoValor
+
+def diminuir(valor=0, diminui=0):
+    novoValor = valor - diminui
+    return novoValor
