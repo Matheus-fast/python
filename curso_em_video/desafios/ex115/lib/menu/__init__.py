@@ -13,7 +13,6 @@ def enfeite(msg):
     print(linha)
     print(f'{msg:^{tam}}')
     print(linha)
-
     return linha
 
 def converterInt():
@@ -39,7 +38,7 @@ def menu():
         print('\033[36m2 \033[m - \033[34mCadastrar nova pessoa\033[m')
         print('\033[36m3 \033[m - \033[34mSair do sistema\033[m')
 
-        print(linha)
+        print(linha, '\n')
             
         while True:
 
@@ -52,15 +51,23 @@ def menu():
             if 1 <= num <= 3:
                 break
 
+        
+        sleep(1)
 
         if num == 1:
             print()
             enfeite(f'CLIENTES CADASTRADOS')
             visualizarClientes()
+
+        if num == 2:
+            
             print()
-
-        #if num == 2:
-
+            enfeite('CADASTRAR CLIENTE')
+            nome = str(input('Nome: '))
+            idade = str(input('Idade: '))
+            inserirClientes(nome, idade)
+            print(f'{nome} cadastrado(a) com sucesso.')
+            print()
 
         # parar código
         if num == 3:

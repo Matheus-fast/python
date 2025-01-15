@@ -2,7 +2,7 @@ import os
 
 diretorio = 'C:/Users/mathe/Documents/Programação/python/curso_em_video/desafios/ex115/lib/usuarios/'
 caminho = os.path.join(diretorio, 'usuarios.txt')
-
+arquivo = r"C:/Users/mathe/Documents/Programação/python/curso_em_video/desafios/ex115/"
 
 def criarArquivo():
 
@@ -12,43 +12,37 @@ def criarArquivo():
 
         caminho = os.path.join(diretorio, 'usuarios.txt')
 
-        open(caminho, 'wt+')
-
-        print(f'Arquivo {'usuarios.txt'} criado com sucesso!')
+        open(caminho, 'x')
 
     except Exception as e:
         print(f'ERRO! {e}')
 
-    except:
-        print('Arquivo já criado!')
 
 def visualizarClientes():
 
     global caminho
 
-    arquivo = r"C:/Users/mathe/Documents/Programação/python/curso_em_video/desafios/ex115/"
-
-    if not os.path.exists(arquivo):
+    arquivo = 'usuarios.txt'
+    
+    if not os.path.exists(caminho):
         criarArquivo()
 
-    try:
+    try:    
 
         with open(caminho, 'r') as arquivo:
             print(f'{arquivo.read()}')
-    
+            arquivo.close()
+
     except Exception as e:
         print(f'ERRO! {e}')
 
-def inserirClientes():
+def inserirClientes(nome, idade):
+
+    global caminho
 
     try:
+        with open(caminho, 'a') as arquivo:
+            arquivo.write(f'{nome:<20} {idade:>5} anos\n')
 
-        open('usuario.txt')
-    
     except Exception as e:
         print(f'ERRO! {e}')
-
-    else:
-        print('Consegui abrir!')
-
-inserirClientes()
