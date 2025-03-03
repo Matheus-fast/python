@@ -3,26 +3,26 @@ import sys
 sys.path.append(r'C:\Users\Mathe\Documents\Programação\python\curso_em_video\desafios\ex115\lib')
 
 from time import sleep
-from usuarios import *
+from ..usuarios import *
 
-def enfeite(msg):
+def ornament(msg):
 
     tam = 45
-    linha = '=' * tam
+    line = '=' * tam
 
-    print(linha)
+    print(line)
     print(f'{msg:^{tam}}')
-    print(linha)
-    return linha
+    print(line)
+    return line
 
-def converterInt():
+def convertInt():
 
     while True:
 
         num = input('\033[33mInsira sua opção: \033[m')
 
         if num.isalpha():
-            print('\033[31mERRO! O valor digitado não é um número.\033[m')
+            print('\033[ERROR! O valor digitado não é um número.\033[m')
 
         else:
             num = int(num)
@@ -32,20 +32,20 @@ def menu():
 
     while True:
 
-        linha = enfeite('MENU PRINCIPAL')
+        line = ornament('MENU PRINCIPAL')
 
         print('\033[36m1 \033[m - \033[34mVer pessoas cadastradas\033[m')
         print('\033[36m2 \033[m - \033[34mCadastrar nova pessoa\033[m')
         print('\033[36m3 \033[m - \033[34mSair do sistema\033[m')
 
-        print(linha, '\n')
+        print(line, '\n')
             
         while True:
 
-            num = converterInt()
+            num = convertInt()
 
             if num > 3:
-                print('\033[31mERRO! O valor digitado não é uma opção válida.\033[m')
+                print('\033[ERROR! O valor digitado não é uma opção válida.\033[m')
 
 
             if 1 <= num <= 3:
@@ -56,22 +56,22 @@ def menu():
 
         if num == 1:
             print()
-            enfeite(f'CLIENTES CADASTRADOS')
-            visualizarClientes()
+            ornament(f'CLIENTES CADASTRADOS')
+            view_clients()
 
         if num == 2:
             
             print()
-            enfeite('CADASTRAR CLIENTE')
+            ornament('CADASTRAR CLIENTE')
             nome = str(input('Nome: '))
             idade = str(input('Idade: '))
-            inserirClientes(nome, idade)
+            insert_clients(nome, idade)
             print(f'{nome} cadastrado(a) com sucesso.')
             print()
 
         # parar código
         if num == 3:
-            enfeite('Saindo do sistema...')
+            ornament('Saindo do sistema...')
             sleep(1)
             break
 
